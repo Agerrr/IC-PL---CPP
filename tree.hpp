@@ -1,17 +1,18 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-typedef treeNode node;
-
+template <class KV> 
 class treeNode{
-	private:
+	protected:
 		KV value;
-		node* left;
-		node* right;
+		treeNode* left;
+		treeNode* right;
 	public:
-		void insert(KV);
+		treeNode(KV, treeNode*, treeNode*);
+		treeNode* insert(KV*, treeNode*);
 		KV get(KV);
-		void remove(KV);
-}
+		//void remove(KV);
+};
 
